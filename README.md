@@ -52,11 +52,24 @@ A sleek, modern, and highly addictive Word Scramble game built as a high-perform
    cd WordScramble
    ```
 
-2. **Configure API Key**
-   Open `static/js/script.js` and locate the `WORDNIK_API_KEY` constant to ensure your key is active.
+2. **Configure API Key**  
+   To prevent leaking API keys, the project uses a `config.js` file that is ignored by Git.
+   - Create a file named `config.js` in the `static/js/` directory.
+   - Add your [Wordnik API Key](https://developer.wordnik.com/) inside it:
+     ```javascript
+     const WORDNIK_API_KEY = 'YOUR_WORDNIK_API_KEY_HERE';
+     ```
 
-3. **Launch the Game**
+3. **Launch the Game**  
    Simply open `index.html` in your browser, or serve it using a local server (e.g., Live Server in VS Code).
+
+---
+
+## 🔒 Security Note
+This project implements security best practices for public repositories:
+- **Environment Separation**: sensitive keys are kept in `static/js/config.js`.
+- **Git Protection**: A `.gitignore` file is included to ensure `config.js` and other sensitive environment files are never pushed to GitHub.
+- **Clean History**: The project history has been sanitized to ensure no legacy keys are accessible in previous commits.
 
 ---
 
