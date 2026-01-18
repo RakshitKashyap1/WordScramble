@@ -1,0 +1,38 @@
+# Secrets and Environment Variables
+.env
+.env.local
+.env.*
+*.pem
+*.key
+secrets.py
+secrets.json
+config.js
+config.json
+api_keys.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+dist/
+build/
+*.egg-info/
+
+# JavaScript / Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS specific
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp

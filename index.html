@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Scramble</title>
+    <meta name="description" content="A premium word scramble game with real-time hints, definitions, and synonyms.">
+
+    <!-- SEO & Favicon -->
+    <link rel="canonical" href="https://wordscramble.example.com" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Direct paths to static assets -->
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Word <span>Scramble</span></h1>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="label">Score</span>
+                    <span id="score" class="value">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="label">Best</span>
+                    <span id="best-score" class="value">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-card">
+            <div id="scrambled-word" class="scrambled-word">...</div>
+
+            <div class="input-section">
+                <input type="text" id="user-input" placeholder="Type your guess here..." autocomplete="off"
+                    aria-label="Enter your guess">
+                <button id="check-btn" class="primary-btn">Check</button>
+            </div>
+
+            <div class="actions">
+                <button id="hint-btn" class="secondary-btn">Hint</button>
+                <button id="refresh-btn" class="secondary-btn">New Word</button>
+            </div>
+
+            <div id="hint-container" class="hint-container hidden">
+                <div class="hint-tabs">
+                    <button class="tab-btn active" data-tab="definition">Definition</button>
+                    <button class="tab-btn" data-tab="synonyms">Synonyms</button>
+                    <button class="tab-btn" data-tab="antonyms">Antonyms</button>
+                </div>
+                <div class="tab-content">
+                    <p id="hint-text">Click a tab to see hint</p>
+                </div>
+            </div>
+        </main>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <!-- Script loading -->
+    <script src="static/js/config.js"></script>
+    <script src="static/js/script.js"></script>
+</body>
+
+</html>
